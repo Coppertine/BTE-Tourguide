@@ -1,4 +1,4 @@
-package com.coppertine.java.bteguide.client.gui;
+package com.coppertine.java.bte.tourguide.client.gui;
 
 import net.minecraft.client.gui.GuiIngame;
 import net.minecraft.client.gui.GuiIngameMenu;
