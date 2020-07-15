@@ -1,0 +1,15 @@
+[
+  "modid": "bteguide",
+  "name": "Build The Earth Guide",
+  "description": "",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Coppertine"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": ["terra121", "terramap", "worldedit"]
+}
+]

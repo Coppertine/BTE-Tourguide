@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = BTEGuide.MODID, name = BTEGuide.NAME, version = BTEGuide.VERSION)
+@Mod(modid = BTEGuide.MODID, name = BTEGuide.NAME, version = BTEGuide.VERSION, useMetadata = true)
 public class BTEGuide
 {
     public static final String MODID = "bteguide";
