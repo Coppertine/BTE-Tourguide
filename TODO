@@ -1,0 +1,17 @@
+List from Smyler
+
+- When the player opens the game for the first time, there is a prompt to start the tutorial before the main screen shows
+
+- There is also a new button on the main screen to restart the tutorial
+-- (Doing button on main menu first, doing gui after startup later.)
+-- (Should give CustomMainMenu support)
+
+- On the main screen: an arrow shows the singleplayer menu
+- On the world list: an arrow shows the pre-generated world
+- When the user joins the world: a toast/chat message says hello, welcome to BTE... etc
+- Asks to press M to open the map
+- Once on the map, asks to choose somewhere to build and right click it. The areas which are already claimed are displayed so the user can't go there
+- Once the user teleported, close the map and explain that he needs to build two buildings etc in an other GUI, preferably transparent so it still feels like in-game
+- Propose the user to get a few world edit tips, explain them on the GUI and let the user test the commands at each step
+- Propose a few Google Earth tips, same idea
+- Have a clickable text in the chat every X minutes that takes him to a prefilled page on the website once he is done
