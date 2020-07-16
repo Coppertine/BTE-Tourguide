@@ -1,5 +1,6 @@
 package com.coppertine.java.bte.tourguide;
 
+import com.coppertine.java.bte.tourguide.client.gui.handler.MainMenuHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -26,5 +27,11 @@ public class BTETourGuideMod
     public void init(FMLInitializationEvent event)
     {
 
+    }
+
+    @EventHandler
+    public void initClient()
+    {
+        new MainMenuHandler().register();
     }
 }
