@@ -1,43 +1,49 @@
 package com.coppertine.java.bte.tourguide.client.gui.handler;
 
-import com.coppertine.java.bte.tourguide.utils.EventRegistrations;
+import com.coppertine.java.bte.tourguide.BTETourGuideMod;
+
+import com.coppertine.java.bte.tourguide.client.gui.menu.GuiTourGuideMenu;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiMainMenu;
 import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.client.resources.I18n;
 import net.minecraftforge.client.event.GuiScreenEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import org.apache.logging.log4j.Level;
 
-import java.util.List;
-
-public class GuiHandler extends EventRegistrations {
+public class GuiHandler {
 
     private static final int BUTTON_TOUR_GUIDE = 1789052;
+    private final BTETourGuideMod mod;
+
+    public GuiHandler(BTETourGuideMod mod) {
+        this.mod = mod;
+    }
+
     @SubscribeEvent
-    public void injectIntoIngameMenu(GuiScreenEvent.InitGuiEvent.Post event) {
+    public void onGuiScreen(GuiScreenEvent.InitGuiEvent.Post event) {
 
         GuiScreen guiScreen = event.getGui();
         if (!(guiScreen instanceof GuiMainMenu)) {
             return;
         }
+        BTETourGuideMod.logger.log(Level.INFO, "In Main Menu, placing in new button.");
 
-        InjectedButton button = new InjectedButton(
-                guiScreen,
-                BUTTON_TOUR_GUIDE,
-                guiScreen.width / 2 - 100,
-                guiScreen.height / 4 + 10 + 4 * 24,
-                200,
-                20,
-                "btetourguide.gui.tourguide",
-                this::onButton
-        );
 
-        if (guiScreen.getClass().getName().endsWith("custommainmenu.gui.GuiFakeMain")) {
-            // CustomMainMenu uses a different list in the event than in its Fake gui
-            addButton(event, button);
-            return;
-        }
-        addButton(guiScreen, button);
-
+        GuiButton button = new GuiButton(BUTTON_TOUR_GUIDE, event.getGui().width / 2 - 100,
+                event.getGui().height / 4 + 10 + 3 * 38, I18n.format("btetourguide.gui.tourguide"));
+        event.getButtonList().add(button);
     }
 
+    @SubscribeEvent
+    public void onButton(GuiScreenEvent.ActionPerformedEvent.Pre event) {
+        if (!event.getButton().enabled) return;
+
+        if (event.getGui() instanceof GuiMainMenu) {
+            if (event.getButton().id == BUTTON_TOUR_GUIDE) {
+                // Open Tour Guide Menu
+                new GuiTourGuideMenu();
+            }
+        }
+    }
 }

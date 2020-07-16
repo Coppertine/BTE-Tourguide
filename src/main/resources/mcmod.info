@@ -1,5 +1,5 @@
-[
-  "modid": "bte-tourguide",
+{
+  "modid": "btetourguide",
   "name": "Build The Earth Tour Guide",
   "description": "",
   "version": "${version}",
@@ -7,9 +7,8 @@
   "url": "",
   "updateUrl": "",
   "authorList": ["Coppertine"],
-  "credits": "",
+  "credits": "Big thanks to Smyler for helping me along the way to remember how to do forge modding again!",
   "logoFile": "",
   "screenshots": [],
   "dependencies": ["terra121", "terramap", "worldedit"]
 }
-]

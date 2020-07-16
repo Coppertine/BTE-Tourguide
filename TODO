@@ -3,7 +3,7 @@ List from Smyler
 - When the player opens the game for the first time, there is a prompt to start the tutorial before the main screen shows
 
 - There is also a new button on the main screen to restart the tutorial
--- (Doing button on main menu first, doing gui after startup later.)
+-- (Doing button on main menu first, doing gui after startup later.) # DONE
 -- (Should give CustomMainMenu support)
 
 - On the main screen: an arrow shows the singleplayer menu

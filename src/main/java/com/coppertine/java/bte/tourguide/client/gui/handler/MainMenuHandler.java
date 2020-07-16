@@ -1,6 +1,6 @@
 package com.coppertine.java.bte.tourguide.client.gui.handler;
 
-import com.coppertine.java.bte.tourguide.utils.EventRegistrations;
+
 
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
@@ -14,7 +14,7 @@ import net.minecraft.client.gui.GuiButton;
 
 import java.util.List;
 
-public class MainMenuHandler extends EventRegistrations {
+public class MainMenuHandler {
 
     @SubscribeEvent
     public void onInit(GuiScreenEvent.InitGuiEvent.Post event)
