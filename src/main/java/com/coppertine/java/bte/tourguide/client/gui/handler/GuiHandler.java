@@ -1,8 +1,7 @@
 package com.coppertine.java.bte.tourguide.client.gui.handler;
 
 import com.coppertine.java.bte.tourguide.BTETourGuideMod;
-
-import com.coppertine.java.bte.tourguide.client.gui.menu.GuiTourGuideMenu;
+import fr.thesmyler.smylibgui.screen.TestScreen;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiMainMenu;
 import net.minecraft.client.gui.GuiScreen;
@@ -42,7 +41,8 @@ public class GuiHandler {
         if (event.getGui() instanceof GuiMainMenu) {
             if (event.getButton().id == BUTTON_TOUR_GUIDE) {
                 // Open Tour Guide Menu
-                new GuiTourGuideMenu();
+                //new GuiTourGuideMenu();
+                TestScreen screen = new TestScreen(event.getGui());
             }
         }
     }
